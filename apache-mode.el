@@ -817,11 +817,13 @@
             (setq indent (+ indent apache-indent-level)))
         indent))))
 
-;;;###autoload(add-to-list 'auto-mode-alist '("\\.htaccess\\'"   . apache-mode))
-;;;###autoload(add-to-list 'auto-mode-alist '("httpd\\.conf\\'"  . apache-mode))
-;;;###autoload(add-to-list 'auto-mode-alist '("srm\\.conf\\'"    . apache-mode))
-;;;###autoload(add-to-list 'auto-mode-alist '("access\\.conf\\'" . apache-mode))
-;;;###autoload(add-to-list 'auto-mode-alist '("sites-\\(available\\|enabled\\)/" . apache-mode))
+;;;###autoload(add-to-list 'auto-mode-alist '("/\\.htaccess\\'"   . apache-mode))
+;;;###autoload(add-to-list 'auto-mode-alist '("/httpd\\.conf\\'"  . apache-mode))
+;;;###autoload(add-to-list 'auto-mode-alist '("/srm\\.conf\\'"    . apache-mode))
+;;;###autoload(add-to-list 'auto-mode-alist '("/access\\.conf\\'" . apache-mode))
+;;;###autoload(add-to-list 'auto-mode-alist '("/apache2/.+\\.conf\\'" . apache-mode))
+;;;###autoload(add-to-list 'auto-mode-alist '("/httpd/conf/.+\\.conf\\'" . apache-mode))
+;;;###autoload(add-to-list 'auto-mode-alist '("/apache2/sites-\\(?:available\\|enabled\\)/" . apache-mode))
 
 (provide 'apache-mode)
 
