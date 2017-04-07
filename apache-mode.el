@@ -56,7 +56,7 @@
 (require 'regexp-opt)
 
 (defvar apache-indent-level 4
-  "*Number of spaces to indent per level")
+  "*Number of spaces to indent per level.")
 
 (defvar apache-mode-syntax-table
   (let ((table (make-syntax-table)))
@@ -794,8 +794,7 @@
 
 
 (defun apache-previous-indentation ()
-  ;; Return the previous (non-empty/comment) indentation.  Doesn't save
-  ;; position.
+  "Return the previous (non-empty/comment) indentation.  Doesn't save position."
   (let (indent)
     (while (and (null indent)
                 (zerop (forward-line -1)))
@@ -804,7 +803,7 @@
     (or indent 0)))
 
 (defun apache-calculate-indentation ()
-  ;; Return the amount the current line should be indented.
+  "Return the amount the current line should be indented."
   (save-excursion
     (forward-line 0)
     (if (bobp)
