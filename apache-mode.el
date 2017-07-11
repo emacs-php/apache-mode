@@ -4,10 +4,10 @@
 ;; Copyright (c) 1999 Jonathan Marten  <jonathan.marten@uk.sun.com>
 
 ;; Author: Karl Chen <quarl@nospam.quarl.org>
+;; Maintainer: USAMI Kenta <tadsan@zonu.me>
 
 ;; Keywords: languages, faces
-;; Last edit: 2005-01-06
-;; Version: 2.0 $Id: apache-mode.el 8264 2005-06-29 23:34:41Z quarl $
+;; Version: 2.0
 
 ;; apache-mode.el is free software; you can redistribute it and/or modify it
 ;; under the terms of the GNU General Public License as published by the Free
