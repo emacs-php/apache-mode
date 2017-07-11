@@ -84,9 +84,9 @@
 
   (set (make-local-variable 'font-lock-defaults)
        '(apache-font-lock-keywords nil t
-                                   ((?_ . "w")
-                                    (?- . "w"))
-                                   beginning-of-line)))
+                             ((?_ . "w")
+                              (?- . "w"))
+                             beginning-of-line)))
 
 ;; Font lock
 (defconst apache-font-lock-keywords
@@ -784,13 +784,13 @@
   "Expressions to highlight in Apache config buffers.")
 
 (defun apache-indent-line ()
-   "Indent current line of Apache code."
-   (interactive)
-   (let ((savep (> (current-column) (current-indentation)))
-	 (indent (max (apache-calculate-indentation) 0)))
-     (if savep
-	 (save-excursion (indent-line-to indent))
-       (indent-line-to indent))))
+  "Indent current line of Apache code."
+  (interactive)
+  (let ((savep (> (current-column) (current-indentation)))
+        (indent (max (apache-calculate-indentation) 0)))
+    (if savep
+        (save-excursion (indent-line-to indent))
+      (indent-line-to indent))))
 
 
 (defun apache-previous-indentation ()
