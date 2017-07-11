@@ -7,7 +7,7 @@
 ;; Maintainer: USAMI Kenta <tadsan@zonu.me>
 
 ;; Keywords: languages, faces
-;; Version: 2.0
+;; Version: 2.1
 
 ;; apache-mode.el is free software; you can redistribute it and/or modify it
 ;; under the terms of the GNU General Public License as published by the Free
