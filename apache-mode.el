@@ -5,7 +5,8 @@
 
 ;; Author: Karl Chen <quarl@nospam.quarl.org>
 ;; Maintainer: USAMI Kenta <tadsan@zonu.me>
-
+;; Homepage: https://github.com/emacs-php/apache-mode
+;; License: GPL-2.0-or-later
 ;; Keywords: languages, faces
 ;; Version: 2.1
 
