@@ -1,4 +1,4 @@
-;;; apache-mode.el --- major mode for editing Apache configuration files
+;;; apache-mode.el --- Major mode for editing Apache httpd configuration files
 
 ;; Copyright (c) 2004, 2005 Karl Chen <quarl@nospam.quarl.org>
 ;; Copyright (c) 1999 Jonathan Marten  <jonathan.marten@uk.sun.com>
@@ -27,13 +27,10 @@
 
 ;;; Commentary:
 ;;
-;;   (autoload 'apache-mode "apache-mode" nil t)
-;;   (add-to-list 'auto-mode-alist '("\\.htaccess\\'"   . apache-mode))
-;;   (add-to-list 'auto-mode-alist '("httpd\\.conf\\'"  . apache-mode))
-;;   (add-to-list 'auto-mode-alist '("srm\\.conf\\'"    . apache-mode))
-;;   (add-to-list 'auto-mode-alist '("access\\.conf\\'" . apache-mode))
-;;   (add-to-list 'auto-mode-alist '("sites-\\(available\\|enabled\\)/" . apache-mode))
+;; apache-mode is a major mode for editing Apache HTTP Server Configuration files.
+;; https://httpd.apache.org/docs/2.4/en/configuring.html
 ;;
+;; This mode supports Apache HTTP Server 2.4 and major modules.
 
 ;;; History:
 ;;
