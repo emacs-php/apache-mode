@@ -8,7 +8,7 @@
 ;; Homepage: https://github.com/emacs-php/apache-mode
 ;; License: GPL-2.0-or-later
 ;; Keywords: languages, faces
-;; Version: 2.1
+;; Version: 2.2.0
 
 ;; apache-mode.el is free software; you can redistribute it and/or modify it
 ;; under the terms of the GNU General Public License as published by the Free
