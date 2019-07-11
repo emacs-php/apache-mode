@@ -1033,7 +1033,7 @@
         "SuppressSize"
         "SymLinksIfOwnerMatch"
         "sysvsem"
-        "temporary"
+        "temp"
         "tpfcore"
         "unformatted"
         "unset"
