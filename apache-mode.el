@@ -75,7 +75,7 @@
     table))
 
 ;;;###autoload
-(define-derived-mode apache-mode fundamental-mode "Apache"
+(define-derived-mode apache-mode nxml-mode "Apache"
   "Major mode for editing Apache configuration files."
 
   (set (make-local-variable 'comment-start) "# ")
