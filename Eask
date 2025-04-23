@@ -1,3 +1,5 @@
+;; -*- mode: eask; lexical-binding: t -*-
+
 (package "apache-mode"
          "2.2.0"
          "Major mode for editing Apache httpd configuration files")
