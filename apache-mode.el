@@ -91,6 +91,37 @@
                               (?- . "w"))
                              beginning-of-line)))
 
+;;; Customization
+(defgroup apache nil
+  "Custom module organizer and loader."
+  :tag "Apache"
+  :group (intern (user-login-name)))
+(defgroup apache-faces nil
+  "Custom module organizer and loader."
+  :tag "Apache faces"
+  :group 'apache)
+
+(defface apache-section-face
+  '((t :inherit font-lock-function-name-face))
+  "Basic face for highlighting section tags <If>, <ElseIf>, <IfDefine> etc."
+  :group 'apache-faces)
+(defface apache-unknown-sections-face
+  '((t :inherit font-lock-warning-face))
+  "Basic face for highlighting unknown <SECTION>s."
+  :group 'apache-faces)
+(defface apache-directive-face
+  '((t :inherit font-lock-keyword-face))
+  "Basic face for highlighting derectives."
+  :group 'apache-faces)
+(defface apache-variable-face
+  '((t :inherit font-lock-type-face))
+  "Basic face for highlighting unknown VAIABLE = \"..\"."
+  :group 'apache-faces)
+(defface apache-unknown-variable-face
+  '((t (:inherit font-lock-warning-face :weight normal)))
+  "Basic face for highlighting unknown VAIABLE = \"..\"."
+  :group 'apache-faces)
+
 ;; Font lock
 (defconst apache-font-lock-keywords
   (purecopy
@@ -128,7 +159,7 @@
              )
            'words)
           ".*?>")
-        1 'font-lock-function-name-face)
+        1 'apache-section-face)
        (,(concat                       ; directives
           "^[ \t]*"
           (regexp-opt
@@ -959,7 +990,7 @@
              "TopSites"
              "TopURLs")
            'words))
-        1 'font-lock-keyword-face)
+        1 'apache-directive-face)
        (,(regexp-opt
           '("Off"
             "On"
@@ -1150,7 +1181,11 @@
             "server-status"                                   ; mod_status
             )
           'words)
-        1 'font-lock-type-face))))
+        1 'apache-variable-face)
+       ("^[ 	]*\\([^#<= 	]*\\)"                            ; Unknown variable
+        1 'apache-unknown-variable-face)
+       ("^[ \t]*</?\\([^>]*\\)>"                              ; Unknown sections
+        1 'apache-unknown-sections-face))))
   "Expressions to highlight in Apache config buffers.")
 
 (defun apache-indent-line ()
